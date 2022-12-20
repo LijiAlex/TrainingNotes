@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Response</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+    {% if name == 'Liji': %}
+        <h1>Hi {{name}} </h1>
+    {% else: %}
+        <h3>Wrong username and password, {{name}} </h3>
+    {% endif %}
+    </body>
+</html>
