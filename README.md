@@ -10,3 +10,8 @@
 7. Tuple
 8. Set
 9. Dictionary
+10. Memory Management
+11. Slicing
+12. File Handling
+13. Modules and Packages
+14. Regular Expressions
