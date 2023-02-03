@@ -12,6 +12,12 @@
 9. Dictionary
 10. Memory Management
 11. Slicing
-12. File Handling
+12. File Handling - txt, csv, json, yaml
 13. Modules and Packages
 14. Regular Expressions
+
+## Python Advanced
+1. Functions
+2. Parameters and Arguments
+3. Scope of Variable
+4. Lambda functions, Functions as Objects
