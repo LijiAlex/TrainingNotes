@@ -1,0 +1,129 @@
+show databases;
+
+CREATE DATABASE school;
+
+USE school;
+
+show tables;
+
+Drop database school;
+
+CREATE TABLE Students (
+    StudentID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+
+DROP TABLE Students;
+
+SELECT * FROM Students;
+
+INSERT INTO Students (StudentID, LastName, FirstName, Address, City)
+VALUES (654356, 'Tom', 'Erichsen', 'Skagen 21', 'NY');
+
+INSERT INTO Students (StudentID, LastName, FirstName, Address)
+VALUES (654356, 'Tom', 'Erichsen', 'Skagen 21');
+
+DROP TABLE Students;
+
+CREATE TABLE Students (
+    StudentID int UNIQUE,
+    LastName varchar(255),
+    FirstName varchar(255) NOT NULL,
+    Address varchar(255),
+    City varchar(255)
+);
+
+ALTER TABLE Students
+ALTER City SET DEFAULT 'Sandnes';
+
+INSERT INTO Students (StudentID, LastName, FirstName, Address)
+VALUES (32543543, 'Tom', 'Erichsen', 'Skagen 21');
+
+INSERT INTO Students VALUES (13213, 'Tommy', 'Chacko', 'Merdin 488', 'Newyork');
+
+select * from Students;
+
+INSERT INTO Students VALUES (132, 'Ram', 'Sharma', 'MG Road 2323', 'Delhi');
+INSERT INTO Students VALUES (2324, 'Chandni', 'Mishra', 'APG Nagar 23232', 'Chandigarh');
+INSERT INTO Students VALUES (232233, 'Randvi', 'Chottelal', 'Sansui 11/4', 'Delhi');
+INSERT INTO Students VALUES (355767, 'Anup', 'Mishra', '121/ 343/232 JP Nagar', 'Chandigarh');
+
+
+INSERT INTO Students (StudentID, LastName, FirstName, Address)
+VALUES (654356, 'Tom', 'Erichsen', 'Skagen 21');
+
+select * from Students where City = "Delhi";
+
+select StudentID, FirstName from Students where City = "Delhi";
+
+select * from Students where City = "Delhi" or city = "Chandigarh";
+
+SELECT * FROM Students where NOT city = "Delhi";
+
+SELECT * FROM Students ORDER BY city;
+
+
+SELECT * FROM Students ORDER BY city DESC;
+
+SELECT * FROM Students ORDER BY city, StudentID ;
+
+SELECT * FROM Students ORDER BY city ASC, StudentID DESC;
+
+INSERT INTO Students (StudentID, LastName, FirstName) VALUES (342432, 'Ram', 'Sharma');
+INSERT INTO Students  (StudentID, LastName, FirstName) VALUES (687687, 'Chandni', 'Mishra');
+INSERT INTO Students (StudentID, LastName, FirstName) VALUES (56456, 'Randvi', 'Chottelal');
+INSERT INTO Students (StudentID, LastName, FirstName) VALUES (876876, 'Anup', 'Mishra');
+
+select * from students;
+
+SELECT * FROM Students WHERE Address IS NULL;
+
+SELECT * FROM Students WHERE Address IS NOT NULL;
+
+UPDATE Students
+SET Address = 'P11/2, Alfred Schmidt', City = 'Frankfurt'
+WHERE StudentID = 342432;
+
+select * from students WHERE StudentID = 342432;
+
+select * from students;
+
+ALTER TABLE Students
+ADD Postalcode varchar(255);
+
+UPDATE Students
+SET Postalcode = 110001
+WHERE City = 'Sandnes';
+
+DELETE FROM Students WHERE City = 'Delhi';
+
+select * from students LIMIT 5;
+
+SELECT MIN(StudentID) AS StartingId
+FROM Students;
+
+SELECT MIN(StudentID)  AS StartingId , MAX(StudentID)  AS EndingId
+FROM Students;
+
+SELECT count(*) from Students;
+
+select distinct city from Students;
+
+select count(distinct city) from Students;
+
+
+SELECT SUM(StudentID) FROM Students;
+
+select * from students
+where lastname like 'R%';
+
+select * from students
+where lastname like '___';
+
+SELECT * FROM Students WHERE City IN ('Frankfurt', 'Delhi', 'NewYork');
+
+SELECT * FROM Students
+WHERE StudentID BETWEEN 200000 AND 400000;
