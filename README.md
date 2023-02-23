@@ -21,3 +21,12 @@
 2. Parameters and Arguments
 3. Scope of Variable
 4. Lambda functions, Functions as Objects
+5. OOPs - Classes and Objects
+6. Encapsulation, Abstraction, Inheritence, Polymorphism
+
+## SQL
+1. create/ drop/ show/ use database
+2. create/ drop/ alter table
+3. select/ update/ delete rows
+4. joins
+5. order by, group by
